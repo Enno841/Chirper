@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('Chirps', ChirpController::class)
+Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store'])
     ->middleware(['auth', 'verified']);
 
